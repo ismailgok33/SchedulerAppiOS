@@ -13,6 +13,7 @@
 		EC149BBD2728847200B51B6E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC149BBC2728847200B51B6E /* Preview Assets.xcassets */; };
 		EC149BBF2728847200B51B6E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC149BBE2728847200B51B6E /* Persistence.swift */; };
 		EC149BC22728847200B51B6E /* ScheduleMyWork.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC149BC02728847200B51B6E /* ScheduleMyWork.xcdatamodeld */; };
+		EC149BCD27289C4200B51B6E /* HideKeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC149BCC27289C4200B51B6E /* HideKeyboardExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		EC149BBC2728847200B51B6E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EC149BBE2728847200B51B6E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		EC149BC12728847200B51B6E /* ScheduleMyWork.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ScheduleMyWork.xcdatamodel; sourceTree = "<group>"; };
+		EC149BCC27289C4200B51B6E /* HideKeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboardExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +57,12 @@
 		EC149BB42728846F00B51B6E /* ScheduleMyWork */ = {
 			isa = PBXGroup;
 			children = (
+				EC149BC82728933900B51B6E /* View */,
+				EC149BC92728934B00B51B6E /* Model */,
+				EC149BCA27289BAA00B51B6E /* Extension */,
+				EC149BCB27289BB800B51B6E /* Utility */,
 				EC149BB52728846F00B51B6E /* ScheduleMyWorkApp.swift */,
-				EC149BB72728846F00B51B6E /* ContentView.swift */,
 				EC149BB92728847100B51B6E /* Assets.xcassets */,
-				EC149BBE2728847200B51B6E /* Persistence.swift */,
-				EC149BC02728847200B51B6E /* ScheduleMyWork.xcdatamodeld */,
 				EC149BBB2728847200B51B6E /* Preview Content */,
 			);
 			path = ScheduleMyWork;
@@ -71,6 +74,38 @@
 				EC149BBC2728847200B51B6E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EC149BC82728933900B51B6E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EC149BB72728846F00B51B6E /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EC149BC92728934B00B51B6E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EC149BBE2728847200B51B6E /* Persistence.swift */,
+				EC149BC02728847200B51B6E /* ScheduleMyWork.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EC149BCA27289BAA00B51B6E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EC149BCC27289C4200B51B6E /* HideKeyboardExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		EC149BCB27289BB800B51B6E /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +180,7 @@
 			files = (
 				EC149BBF2728847200B51B6E /* Persistence.swift in Sources */,
 				EC149BC22728847200B51B6E /* ScheduleMyWork.xcdatamodeld in Sources */,
+				EC149BCD27289C4200B51B6E /* HideKeyboardExtension.swift in Sources */,
 				EC149BB82728846F00B51B6E /* ContentView.swift in Sources */,
 				EC149BB62728846F00B51B6E /* ScheduleMyWorkApp.swift in Sources */,
 			);
