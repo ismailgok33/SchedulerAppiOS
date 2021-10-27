@@ -69,7 +69,8 @@ struct AddTaskFormView: View {
             .foregroundColor(.white)
             .background(isButtonDisabled ? Color.gray : Color.pink)
             .clipShape(Capsule())
-        }
+        } //: VStack
+        
     }
     
     // MARK: - Functions

@@ -26,9 +26,16 @@ struct AddTaskView: View {
             // Header
             AddTaskHeaderView()
             
+            AddTaskFormView()
+                .padding()
+                .background(
+                    Color.white
+                        .clipShape(CustomShape())
+                )
             
         } //: VStack
-        .padding()
+        .ignoresSafeArea(.all)
+        
     }
     
     // MARK: - Functions
