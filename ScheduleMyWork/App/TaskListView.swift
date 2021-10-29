@@ -17,34 +17,38 @@ struct TaskListView: View {
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
         animation: .default)
     private var items: FetchedResults<Item>
+    private var username: String = "Test User"
     
     // MARK: - Body
     
     var body: some View {
-        List {
-            ForEach(items) { item in
-                NavigationLink {
-                    VStack(alignment: .leading) {
-                        Text(item.task ?? "")
-                            .font(.headline)
-                            .fontWeight(.bold)
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                            .font(.footnote)
-                            .foregroundColor(.gray)
-                    }
-                } label: {
-                    VStack(alignment: .leading) {
-                        Text(item.task ?? "")
-                            .font(.headline)
-                            .fontWeight(.bold)
-                        Text(item.timestamp!, formatter: itemFormatter)
-                            .font(.footnote)
-                            .foregroundColor(.gray)
-                    } //: List Item
+        
+        VStack {
+            
+            TaskListHeaderView(username: username)
+            
+            List {
+                ForEach(items, id: \.self) { item in
+                    TaskItemView(item: item, category: "Work")
+                        .frame(height: 50)
+                        .padding()
+                        .background(
+                            Color.white
+                        )
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.25), radius: 8, x: 0, y: 4)
                 }
-            }
-            .onDelete(perform: deleteItems)
-        } //: List
+                .onDelete(perform: deleteItems)
+                .listRowBackground(Color(UIColor.systemGray6))
+
+            } //: List
+            .listStyle(.sidebar)
+        } //: VStack
+        .background(
+            Color(UIColor.systemGray6)
+                .ignoresSafeArea(.all, edges: .all)
+        )
+        
     }
     
     // MARK: - Functions// MARK: - Functions
@@ -62,13 +66,6 @@ struct TaskListView: View {
         }
     }
 }
-
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
 
 // MARK: - Preview
 

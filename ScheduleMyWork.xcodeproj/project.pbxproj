@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		EC149BB62728846F00B51B6E /* ScheduleMyWorkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC149BB52728846F00B51B6E /* ScheduleMyWorkApp.swift */; };
-		EC149BB82728846F00B51B6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC149BB72728846F00B51B6E /* ContentView.swift */; };
 		EC149BBA2728847100B51B6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC149BB92728847100B51B6E /* Assets.xcassets */; };
 		EC149BBD2728847200B51B6E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC149BBC2728847200B51B6E /* Preview Assets.xcassets */; };
 		EC149BBF2728847200B51B6E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC149BBE2728847200B51B6E /* Persistence.swift */; };
@@ -22,12 +21,15 @@
 		EC9C46152729E6BF00780C1F /* AddTaskFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9C46142729E6BF00780C1F /* AddTaskFormView.swift */; };
 		EC9C46172729EB2D00780C1F /* AddTaskFormItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9C46162729EB2D00780C1F /* AddTaskFormItemView.swift */; };
 		EC9C46192729F97D00780C1F /* CustomShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9C46182729F97D00780C1F /* CustomShape.swift */; };
+		ECA3F191272C80EB00B3BE55 /* TaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA3F190272C80EB00B3BE55 /* TaskItemView.swift */; };
+		ECA3F194272C8D3200B3BE55 /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA3F193272C8D3200B3BE55 /* CheckboxStyle.swift */; };
+		ECA3F196272C8D9900B3BE55 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA3F195272C8D9900B3BE55 /* Constant.swift */; };
+		ECA3F198272CAE5F00B3BE55 /* TaskListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA3F197272CAE5F00B3BE55 /* TaskListHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EC149BB22728846F00B51B6E /* ScheduleMyWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScheduleMyWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC149BB52728846F00B51B6E /* ScheduleMyWorkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleMyWorkApp.swift; sourceTree = "<group>"; };
-		EC149BB72728846F00B51B6E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EC149BB92728847100B51B6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC149BBC2728847200B51B6E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EC149BBE2728847200B51B6E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -41,6 +43,10 @@
 		EC9C46142729E6BF00780C1F /* AddTaskFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskFormView.swift; sourceTree = "<group>"; };
 		EC9C46162729EB2D00780C1F /* AddTaskFormItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskFormItemView.swift; sourceTree = "<group>"; };
 		EC9C46182729F97D00780C1F /* CustomShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShape.swift; sourceTree = "<group>"; };
+		ECA3F190272C80EB00B3BE55 /* TaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItemView.swift; sourceTree = "<group>"; };
+		ECA3F193272C8D3200B3BE55 /* CheckboxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxStyle.swift; sourceTree = "<group>"; };
+		ECA3F195272C8D9900B3BE55 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		ECA3F197272CAE5F00B3BE55 /* TaskListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,7 @@
 				EC149BC82728933900B51B6E /* View */,
 				EC149BC92728934B00B51B6E /* Model */,
 				EC149BCA27289BAA00B51B6E /* Extension */,
+				ECA3F192272C8D2100B3BE55 /* Style */,
 				EC149BCB27289BB800B51B6E /* Utility */,
 				EC149BB52728846F00B51B6E /* ScheduleMyWorkApp.swift */,
 				EC149BB92728847100B51B6E /* Assets.xcassets */,
@@ -99,6 +106,8 @@
 				EC9C46122729E2C600780C1F /* AddTaskHeaderView.swift */,
 				EC9C46142729E6BF00780C1F /* AddTaskFormView.swift */,
 				EC9C46162729EB2D00780C1F /* AddTaskFormItemView.swift */,
+				ECA3F190272C80EB00B3BE55 /* TaskItemView.swift */,
+				ECA3F197272CAE5F00B3BE55 /* TaskListHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -124,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				EC9C46182729F97D00780C1F /* CustomShape.swift */,
+				ECA3F195272C8D9900B3BE55 /* Constant.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -131,13 +141,20 @@
 		EC9C46092729DBDF00780C1F /* App */ = {
 			isa = PBXGroup;
 			children = (
-				EC149BB72728846F00B51B6E /* ContentView.swift */,
 				EC9C460A2729DBF800780C1F /* TaskListView.swift */,
 				EC9C460C2729DC1D00780C1F /* CalendarView.swift */,
 				EC9C460E2729DC3300780C1F /* AddTaskView.swift */,
 				EC9C46102729DD1900780C1F /* MainView.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		ECA3F192272C8D2100B3BE55 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				ECA3F193272C8D3200B3BE55 /* CheckboxStyle.swift */,
+			);
+			path = Style;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,15 +230,18 @@
 				EC149BBF2728847200B51B6E /* Persistence.swift in Sources */,
 				EC9C46112729DD1900780C1F /* MainView.swift in Sources */,
 				EC9C460D2729DC1D00780C1F /* CalendarView.swift in Sources */,
+				ECA3F196272C8D9900B3BE55 /* Constant.swift in Sources */,
 				EC149BC22728847200B51B6E /* ScheduleMyWork.xcdatamodeld in Sources */,
 				EC9C460F2729DC3300780C1F /* AddTaskView.swift in Sources */,
+				ECA3F198272CAE5F00B3BE55 /* TaskListHeaderView.swift in Sources */,
 				EC149BCD27289C4200B51B6E /* HideKeyboardExtension.swift in Sources */,
 				EC9C46172729EB2D00780C1F /* AddTaskFormItemView.swift in Sources */,
-				EC149BB82728846F00B51B6E /* ContentView.swift in Sources */,
 				EC149BB62728846F00B51B6E /* ScheduleMyWorkApp.swift in Sources */,
 				EC9C46152729E6BF00780C1F /* AddTaskFormView.swift in Sources */,
+				ECA3F191272C80EB00B3BE55 /* TaskItemView.swift in Sources */,
 				EC9C46132729E2C600780C1F /* AddTaskHeaderView.swift in Sources */,
 				EC9C460B2729DBF800780C1F /* TaskListView.swift in Sources */,
+				ECA3F194272C8D3200B3BE55 /* CheckboxStyle.swift in Sources */,
 				EC9C46192729F97D00780C1F /* CustomShape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
