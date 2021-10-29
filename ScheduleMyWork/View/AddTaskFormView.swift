@@ -24,14 +24,14 @@ struct AddTaskFormView: View {
     // MARK: - Body
     
     var body: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: 20) {
         
             //Textfield
             TextField("Task name", text: $task)
                 .padding()
                 .background(Color(UIColor.systemGray6))
                 .cornerRadius(10)
-            VStack(alignment: .leading, spacing: 5) {
+            VStack(alignment: .leading, spacing: 20) {
                 // Calendar Date
                 AddTaskFormItemView(imageName: "calendar", title: "Friday, 25 October", color: Color.purple)
                 
@@ -50,6 +50,7 @@ struct AddTaskFormView: View {
                 }
             }
             .padding(.horizontal, 20)
+            .padding(.bottom, 50)
             
             // Button
             Button {
@@ -69,7 +70,10 @@ struct AddTaskFormView: View {
             .foregroundColor(.white)
             .background(isButtonDisabled ? Color.gray : Color.pink)
             .clipShape(Capsule())
+            .padding(.bottom, 50)
         } //: VStack
+        .padding(.vertical, 20)
+        
         
     }
     

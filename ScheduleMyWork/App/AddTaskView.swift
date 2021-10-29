@@ -22,10 +22,16 @@ struct AddTaskView: View {
     // MARK: - Body
     
     var body: some View {
-        VStack {
+        VStack(alignment: .center, spacing: 10, content: {
+            
+            Spacer()
+            
             // Header
             AddTaskHeaderView()
             
+            Spacer()
+            
+            // Bottom form
             AddTaskFormView()
                 .padding()
                 .background(
@@ -33,8 +39,14 @@ struct AddTaskView: View {
                         .clipShape(CustomShape())
                 )
             
-        } //: VStack
-        .ignoresSafeArea(.all)
+        }) //: VStack
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
+        .ignoresSafeArea(.all, edges: .all)
+        .background(
+            Color.gray
+                .opacity(0.6)
+                .ignoresSafeArea(.all, edges: .all)
+        )
         
     }
     
