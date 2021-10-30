@@ -32,7 +32,7 @@ struct AddTaskView: View {
             Spacer()
             
             // Bottom form
-            AddTaskFormView()
+            AddTaskFormView(isHighSelected: false, isMediumSelected: false, isLowSelected: false)
                 .padding()
                 .background(
                     Color.white

@@ -13,19 +13,31 @@ struct PriorityButtonView: View {
     
     var buttonTitle: String
     var buttonColor: Color
+    @Binding var isSelected: Bool
     
     // MARK: - Body
     
     var body: some View {
         Button {
             // Select priority
+//            withAnimation(.easeIn(duration: 0.5)) {
+//                self.isSelected.toggle()
+//            }
         } label: {
-            Text(buttonTitle)
-                .font(.headline)
-                .fontWeight(.semibold)
-                .foregroundColor(buttonColor)
-                .padding(.vertical, 6)
+            ZStack {
+                if isSelected {
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(lineWidth: 2)
+                        .foregroundColor(buttonColor)
+                }
+                
+                Text(buttonTitle)
+                    .font(.headline)
+                    .fontWeight(.semibold)
+                    .foregroundColor(buttonColor)
+                    .padding(.vertical, 6)
                 .padding(.horizontal, 12)
+            }
         } //: Button1
         .frame(minWidth: 100, idealWidth: 100, maxWidth: 150, minHeight: 40, idealHeight: 40, maxHeight: 60, alignment: .center)
         .background(
@@ -37,12 +49,3 @@ struct PriorityButtonView: View {
     }
 }
 
-// MARK: - Preview
-
-struct PriorityButtonView_Previews: PreviewProvider {
-    static var previews: some View {
-        PriorityButtonView(buttonTitle: "High", buttonColor: Color.red)
-            .previewLayout(.sizeThatFits)
-            .padding()
-    }
-}
