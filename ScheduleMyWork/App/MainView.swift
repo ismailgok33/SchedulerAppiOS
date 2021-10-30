@@ -27,6 +27,12 @@ struct MainView: View {
                     Image(systemName: "calendar")
                     Text("Calendar")
                 }
+            
+            ProfileView()
+                .tabItem {
+                    Image(systemName: "person.fill")
+                    Text("Pofile")
+                }
         }
     }
 }

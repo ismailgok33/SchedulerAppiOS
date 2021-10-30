@@ -31,6 +31,27 @@ struct AddTaskFormView: View {
                 .padding()
                 .background(Color(UIColor.systemGray6))
                 .cornerRadius(10)
+            
+            
+            VStack(alignment: .leading) {
+                
+                Text("Priority")
+                    .font(.title2)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.gray)
+                    .padding(.horizontal)
+                
+                HStack(alignment: .center, spacing: 12) {
+                    
+                    PriorityButtonView(buttonTitle: "High", buttonColor: Color.red)
+                    PriorityButtonView(buttonTitle: "Medium", buttonColor: Color.orange)
+                    PriorityButtonView(buttonTitle: "Low", buttonColor: Color.green)
+
+                } //: HStack
+            } //: VStack
+            .padding(.vertical)
+            
+            
             VStack(alignment: .leading, spacing: 20) {
                 // Calendar Date
                 AddTaskFormItemView(imageName: "calendar", title: "Friday, 25 October", color: Color.purple)
@@ -48,7 +69,7 @@ struct AddTaskFormView: View {
                     .toggleStyle(SwitchToggleStyle(tint: Color.blue))
 //                    .frame(width: 50, height: 50, alignment: .center)
                 }
-            }
+            } //: VStack
             .padding(.horizontal, 20)
             .padding(.bottom, 50)
             
