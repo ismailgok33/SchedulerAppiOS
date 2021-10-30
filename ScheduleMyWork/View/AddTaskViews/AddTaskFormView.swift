@@ -13,12 +13,7 @@ struct AddTaskFormView: View {
     
     @State var task: String = ""
     @State var remindMe: Bool = false
-    @State var selectedPriority: Int?
-    @State var isHighSelected: Bool
-    
-    @State var isMediumSelected: Bool
-    
-    @State var isLowSelected: Bool
+    @EnvironmentObject var priority: Priority
     
     private var isButtonDisabled: Bool {
         task.isEmpty
@@ -48,35 +43,11 @@ struct AddTaskFormView: View {
                 
                 HStack(alignment: .center, spacing: 12) {
                     
-                    PriorityButtonView(buttonTitle: "High", buttonColor: Color.red, isSelected: $isHighSelected)
-                        .onTapGesture {
-                            withAnimation(.easeOut(duration: 0.5)) {
-                                selectedPriority = 0
-                                isHighSelected = true
-                                isMediumSelected = false
-                                isLowSelected = false
-                            }
-                        }
+                    PriorityButtonView(buttonTitle: "High", buttonColor: Color.red, isSelected: priority.priority == .high)
                     
-                    PriorityButtonView(buttonTitle: "Medium", buttonColor: Color.orange, isSelected: $isMediumSelected)
-                        .onTapGesture {
-                            withAnimation(.easeOut(duration: 0.5)) {
-                                selectedPriority = 1
-                                isHighSelected = false
-                                isMediumSelected = true
-                                isLowSelected = false
-                            }
-                        }
+                    PriorityButtonView(buttonTitle: "Medium", buttonColor: Color.orange, isSelected: priority.priority == .medium)
                     
-                    PriorityButtonView(buttonTitle: "Low", buttonColor: Color.green, isSelected: $isLowSelected)
-                        .onTapGesture {
-                            withAnimation(.easeOut(duration: 0.5)) {
-                                selectedPriority = 2
-                                isHighSelected = false
-                                isMediumSelected = false
-                                isLowSelected = true
-                            }
-                        }
+                    PriorityButtonView(buttonTitle: "Low", buttonColor: Color.green, isSelected: priority.priority == .low)
 
                 } //: HStack
                 .padding(.horizontal)
@@ -157,7 +128,8 @@ struct AddTaskFormView: View {
 
 struct AddTaskFormView_Previews: PreviewProvider {
     static var previews: some View {
-        AddTaskFormView(isHighSelected: false, isMediumSelected: false, isLowSelected: false)
+        AddTaskFormView()
+            .environmentObject(Priority())
             .previewLayout(.sizeThatFits)
     }
 }

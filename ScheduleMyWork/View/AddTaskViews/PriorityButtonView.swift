@@ -13,16 +13,31 @@ struct PriorityButtonView: View {
     
     var buttonTitle: String
     var buttonColor: Color
-    @Binding var isSelected: Bool
+    var isSelected: Bool
+    @EnvironmentObject var priority: Priority
     
     // MARK: - Body
     
     var body: some View {
         Button {
             // Select priority
-//            withAnimation(.easeIn(duration: 0.5)) {
-//                self.isSelected.toggle()
-//            }
+            withAnimation(.easeIn(duration: 0.5)) {
+                if buttonTitle.lowercased() == "\(PriorityType.high.rawValue)" {
+                    priority.priority = .high
+                }
+                else if buttonTitle.lowercased() == "\(PriorityType.medium.rawValue)" {
+                    priority.priority = .medium
+                }
+                else if buttonTitle.lowercased() == "\(PriorityType.low.rawValue)" {
+                    priority.priority = .low
+                }
+                else {
+                    priority.priority = nil
+                    print("DEBUG: Cannot set a priority for button \(buttonTitle)")
+                }
+                
+                // Set priority data of the task
+            }
         } label: {
             ZStack {
                 if isSelected {

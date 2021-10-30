@@ -10,6 +10,12 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         TabView {
+            OverviewView()
+                .tabItem {
+                    Image(systemName: "house.fill")
+                    Text("Overview")
+                }
+            
             TaskListView()
                 .tabItem {
                     Image(systemName: "text.badge.checkmark")

@@ -12,6 +12,7 @@ struct AddTaskView: View {
     // MARK: - Properties
     
     @State var task: String = ""
+    @EnvironmentObject var priority: Priority
     
     private var isButtonDisabled: Bool {
         task.isEmpty
@@ -31,9 +32,8 @@ struct AddTaskView: View {
             
             Spacer()
             
-            // TODO: get those parameters from environment objects
             // Bottom form
-            AddTaskFormView(isHighSelected: false, isMediumSelected: false, isLowSelected: false)
+            AddTaskFormView()
                 .padding()
                 .background(
                     Color.white
@@ -79,5 +79,6 @@ struct AddTaskView: View {
 struct AddTaskView_Previews: PreviewProvider {
     static var previews: some View {
         AddTaskView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+            .environmentObject(Priority())
     }
 }

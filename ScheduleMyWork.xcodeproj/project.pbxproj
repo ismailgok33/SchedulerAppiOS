@@ -15,6 +15,8 @@
 		EC149BCD27289C4200B51B6E /* HideKeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC149BCC27289C4200B51B6E /* HideKeyboardExtension.swift */; };
 		EC44DB67272D7AC0002D576B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44DB66272D7AC0002D576B /* ProfileView.swift */; };
 		EC44DB69272D7D98002D576B /* PriorityButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44DB68272D7D98002D576B /* PriorityButtonView.swift */; };
+		EC7C9248272DE0BF00A1DC4A /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7C9247272DE0BF00A1DC4A /* Priority.swift */; };
+		EC7C924A272DEA1E00A1DC4A /* OverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7C9249272DEA1E00A1DC4A /* OverviewView.swift */; };
 		EC9C460B2729DBF800780C1F /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9C460A2729DBF800780C1F /* TaskListView.swift */; };
 		EC9C460D2729DC1D00780C1F /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9C460C2729DC1D00780C1F /* CalendarView.swift */; };
 		EC9C460F2729DC3300780C1F /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9C460E2729DC3300780C1F /* AddTaskView.swift */; };
@@ -39,6 +41,8 @@
 		EC149BCC27289C4200B51B6E /* HideKeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboardExtension.swift; sourceTree = "<group>"; };
 		EC44DB66272D7AC0002D576B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		EC44DB68272D7D98002D576B /* PriorityButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityButtonView.swift; sourceTree = "<group>"; };
+		EC7C9247272DE0BF00A1DC4A /* Priority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Priority.swift; sourceTree = "<group>"; };
+		EC7C9249272DEA1E00A1DC4A /* OverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewView.swift; sourceTree = "<group>"; };
 		EC9C460A2729DBF800780C1F /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
 		EC9C460C2729DC1D00780C1F /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		EC9C460E2729DC3300780C1F /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
@@ -118,6 +122,7 @@
 			children = (
 				EC149BBE2728847200B51B6E /* Persistence.swift */,
 				EC149BC02728847200B51B6E /* ScheduleMyWork.xcdatamodeld */,
+				EC7C9247272DE0BF00A1DC4A /* Priority.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 				EC9C460E2729DC3300780C1F /* AddTaskView.swift */,
 				EC9C460C2729DC1D00780C1F /* CalendarView.swift */,
 				EC44DB66272D7AC0002D576B /* ProfileView.swift */,
+				EC7C9249272DEA1E00A1DC4A /* OverviewView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -249,8 +255,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC7C9248272DE0BF00A1DC4A /* Priority.swift in Sources */,
 				EC149BBF2728847200B51B6E /* Persistence.swift in Sources */,
 				EC9C46112729DD1900780C1F /* MainView.swift in Sources */,
+				EC7C924A272DEA1E00A1DC4A /* OverviewView.swift in Sources */,
 				EC9C460D2729DC1D00780C1F /* CalendarView.swift in Sources */,
 				ECA3F196272C8D9900B3BE55 /* Constant.swift in Sources */,
 				EC149BC22728847200B51B6E /* ScheduleMyWork.xcdatamodeld in Sources */,
