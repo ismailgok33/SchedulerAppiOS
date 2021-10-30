@@ -18,6 +18,7 @@ struct TaskListView: View {
         animation: .default)
     private var items: FetchedResults<Item>
     private var username: String = "Test User"
+    @State private var isSelectedSegment: Int = 0
     
     // MARK: - Body
     
@@ -25,8 +26,88 @@ struct TaskListView: View {
         
         VStack {
             
+            // Header
             TaskListHeaderView(username: username)
             
+            // Segmented Control
+            ScrollView(.horizontal, showsIndicators: false) {
+                LazyHGrid(rows: gridLayout, spacing: columnSpacing) {
+                    VStack(alignment: .leading, spacing: 1) {
+                        Text("All")
+                            .font(.title2)
+                            .fontWeight(isSelectedSegment == 0 ? .bold : .thin)
+                            .foregroundColor(isSelectedSegment == 0 ? Color.pink : Color.gray)
+                        
+                        if isSelectedSegment == 0 {
+                            Rectangle()
+                                .frame(height: 2)
+                                .foregroundColor(.pink)
+                        } else {
+                            Rectangle()
+                                .frame(height: 0)
+                        }
+                        
+                    } //: VStack
+                    .onTapGesture {
+                        withAnimation(.easeIn(duration: 0.5)) {
+                            isSelectedSegment = 0
+                        }
+                    }
+                    
+                    Spacer()
+                    
+                    VStack(alignment: .leading, spacing: 1) {
+                        Text("Today")
+                            .font(.title2)
+                            .fontWeight(isSelectedSegment == 1 ? .bold : .thin)
+                            .foregroundColor(isSelectedSegment == 1 ? Color.pink : Color.gray)
+                        
+                        if isSelectedSegment == 1 {
+                            Rectangle()
+                                .frame(height: 2)
+                                .foregroundColor(.pink)
+                        } else {
+                            Rectangle()
+                                .frame(height: 0)
+                        }
+                    } //: VStack
+                    .onTapGesture {
+                        withAnimation(.easeIn(duration: 0.5)) {
+                            isSelectedSegment = 1
+                        }
+                    }
+                    
+                    Spacer()
+                    
+                    VStack(alignment: .leading, spacing: 1) {
+                        Text("Upcoming")
+                            .font(.title2)
+                            .fontWeight(isSelectedSegment == 2 ? .bold : .thin)
+                            .foregroundColor(isSelectedSegment == 2 ? Color.pink : Color.gray)
+                        
+                        if isSelectedSegment == 2 {
+                            Rectangle()
+                                .frame(height: 2)
+                                .foregroundColor(.pink)
+                        } else {
+                            Rectangle()
+                                .frame(height: 0)
+                        }
+                    } // VStack
+                    .onTapGesture {
+                        withAnimation(.easeIn(duration: 0.5)) {
+                            isSelectedSegment = 2
+                        }
+                    }
+                    
+                }
+                    
+                
+            } //: ScrollView
+            .frame(height: 100)
+            .padding(.horizontal, 20)
+            
+            // Item List
             List {
                 ForEach(items, id: \.self) { item in
                     TaskItemView(item: item, category: "Work")
