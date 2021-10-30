@@ -31,6 +31,7 @@ struct AddTaskView: View {
             
             Spacer()
             
+            // TODO: get those parameters from environment objects
             // Bottom form
             AddTaskFormView(isHighSelected: false, isMediumSelected: false, isLowSelected: false)
                 .padding()
