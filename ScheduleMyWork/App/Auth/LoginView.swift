@@ -35,7 +35,7 @@ struct LoginView: View {
                     
                     
                     VStack(spacing: 20) {
-                        // username field
+                        // email field
                         CustomTextFieldView(text: $email, placeholder: Text("Email"), imageName: "envelope")
                             .padding()
                             .background(Color(.init(white: 1, alpha: 0.15)))
@@ -68,9 +68,9 @@ struct LoginView: View {
                     
                     // sign in
                     Button {
-                        
+                        // Sign In implementation
                     } label: {
-                        Text("Sign in")
+                        Text("Sign In")
                             .foregroundColor(.white)
                             .font(.headline)
                             .frame(width: 360, height: 50)
@@ -82,8 +82,9 @@ struct LoginView: View {
                     Spacer()
                     
                     // switch to signup
-                    Button {
-                        
+                    NavigationLink {
+                        SignUpView()
+                            .navigationBarHidden(true)
                     } label: {
                         HStack {
                             Text("Don't have an account?")
@@ -93,11 +94,12 @@ struct LoginView: View {
                                 .font(.system(size: 14, weight: .semibold))
                         } //: HStack
                         .foregroundColor(.white)
-                        .padding(.bottom, 32)
-                    }
+                    } //: NavigationLink
+                    .padding(.bottom, 32)
 
                     
                 } //: VStack
+                .padding(.top, -44)
             } //: ZStack
             
             
