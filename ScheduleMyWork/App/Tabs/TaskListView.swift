@@ -110,7 +110,7 @@ struct TaskListView: View {
             // Item List
             List {
                 ForEach(items, id: \.self) { item in
-                    TaskItemView(item: item, category: "Work")
+                    TaskItemView(item: item, category: "Work", buttonTitle: "High", buttonColor: Color.red)
                         .frame(height: 50)
                         .padding()
                         .background(

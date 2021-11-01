@@ -27,7 +27,7 @@ var gridLayout: [GridItem] {
 // MARK: - UI
 
 var backgroundGradient: LinearGradient {
-  return LinearGradient(gradient: Gradient(colors: [Color.pink, Color.blue]), startPoint: .topLeading, endPoint: .bottomTrailing)
+  return LinearGradient(gradient: Gradient(colors: [Color.pink, Color.blue]), startPoint: .top, endPoint: .bottom)
 }
 
 // MARK: - UX

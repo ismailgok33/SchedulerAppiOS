@@ -51,7 +51,7 @@ struct PriorityButtonView: View {
                     .fontWeight(.semibold)
                     .foregroundColor(buttonColor)
                     .padding(.vertical, 6)
-                .padding(.horizontal, 12)
+                    .padding(.horizontal, 12)
             }
         } //: Button1
         .frame(minWidth: 100, idealWidth: 100, maxWidth: 150, minHeight: 40, idealHeight: 40, maxHeight: 60, alignment: .center)

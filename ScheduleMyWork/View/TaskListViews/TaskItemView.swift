@@ -14,6 +14,8 @@ struct TaskItemView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @ObservedObject var item: Item
     var category: String
+    @State var buttonTitle: String
+    @State var buttonColor: Color
     
     // MARK: - Body
     
@@ -55,8 +57,25 @@ struct TaskItemView: View {
             
             Spacer()
             
-            Image(systemName: "person.2.fill")
-                .font(.title)
+            
+            VStack(alignment: .center, spacing: 6) {
+                ZStack {
+                    Text(buttonTitle)
+                        .font(.headline)
+                        .fontWeight(.semibold)
+                        .foregroundColor(buttonColor)
+                        .padding(.horizontal, 12)
+                } //: ZStack
+                .background(
+                    buttonColor
+                        .opacity(0.3)
+                )
+                .clipShape(RoundedRectangle(cornerRadius: 10, style: .circular))
+                
+                
+                Image(systemName: "person.2.fill")
+                    .font(.title)
+            } //: VStack
             
         } //:HStack
     }
