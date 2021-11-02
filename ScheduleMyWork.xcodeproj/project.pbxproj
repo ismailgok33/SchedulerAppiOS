@@ -34,6 +34,7 @@
 		ECA3F194272C8D3200B3BE55 /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA3F193272C8D3200B3BE55 /* CheckboxStyle.swift */; };
 		ECA3F196272C8D9900B3BE55 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA3F195272C8D9900B3BE55 /* Constant.swift */; };
 		ECA3F198272CAE5F00B3BE55 /* TaskListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA3F197272CAE5F00B3BE55 /* TaskListHeaderView.swift */; };
+		ECF8FEE32731D36400122448 /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF8FEE22731D36400122448 /* TaskDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		ECA3F193272C8D3200B3BE55 /* CheckboxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxStyle.swift; sourceTree = "<group>"; };
 		ECA3F195272C8D9900B3BE55 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		ECA3F197272CAE5F00B3BE55 /* TaskListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListHeaderView.swift; sourceTree = "<group>"; };
+		ECF8FEE22731D36400122448 /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 			children = (
 				ECA3F190272C80EB00B3BE55 /* TaskItemView.swift */,
 				ECA3F197272CAE5F00B3BE55 /* TaskListHeaderView.swift */,
+				ECF8FEE22731D36400122448 /* TaskDetailView.swift */,
 			);
 			path = TaskListViews;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECF8FEE32731D36400122448 /* TaskDetailView.swift in Sources */,
 				EC7C9248272DE0BF00A1DC4A /* Priority.swift in Sources */,
 				EC149BBF2728847200B51B6E /* Persistence.swift in Sources */,
 				EC9C46112729DD1900780C1F /* MainView.swift in Sources */,
