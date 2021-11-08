@@ -13,6 +13,7 @@ struct ProfileView: View {
     
     @State var statTitle: String
     @State var statValue: String
+    @State var isReminderOn: Bool = false
     
     
     // MARK: - Body
@@ -86,8 +87,98 @@ struct ProfileView: View {
             } //: HStack
             .padding(.vertical)
             
-            
-            Spacer()
+            Form {
+                Section {
+                    HStack(spacing: 20) {
+                        ZStack {
+                            Color.blue
+                                .opacity(0.3)
+                            
+                            Image(systemName: "alarm")
+                                .resizable()
+                                .scaledToFit()
+                            .frame(width: 30, height: 30)
+                            .foregroundColor(.blue)
+                        } //: ZStack
+                        .frame(width: 45, height: 45)
+                        .clipShape(RoundedRectangle(cornerRadius: 6))
+                        
+                        Text("Reminders")
+                            .font(.title2)
+                            .fontWeight(.semibold)
+                        
+                        Toggle(isOn: $isReminderOn) {
+
+                        }
+                        .toggleStyle(SwitchToggleStyle(tint: Color.blue))
+                        
+                    } //: HStack
+                    .padding(.vertical, 5)
+                } header: {
+                    // No Header name
+                } //: Section
+
+                Section {
+                    HStack(spacing: 20) {
+                        ZStack {
+                            Color.red
+                                .opacity(0.3)
+                            
+                            Image(systemName: "bell")
+                                .resizable()
+                                .scaledToFit()
+                            .frame(width: 30, height: 30)
+                            .foregroundColor(.red)
+                        } //: ZStack
+                        .frame(width: 45, height: 45)
+                        .clipShape(RoundedRectangle(cornerRadius: 6))
+                        
+                        Text("Notifications")
+                            .font(.title2)
+                            .fontWeight(.semibold)
+                        
+                        Toggle(isOn: $isReminderOn) {
+
+                        }
+                        .toggleStyle(SwitchToggleStyle(tint: Color.red))
+                        
+                    } //: HStack
+                    .padding(.vertical, 5)
+                } header: {
+                    // No Header name
+                } //: Section
+                
+                Section {
+                    HStack(spacing: 20) {
+                        ZStack {
+                            Color.green
+                                .opacity(0.3)
+                            
+                            Image(systemName: "bell")
+                                .resizable()
+                                .scaledToFit()
+                            .frame(width: 30, height: 30)
+                            .foregroundColor(.green)
+                        } //: ZStack
+                        .frame(width: 45, height: 45)
+                        .clipShape(RoundedRectangle(cornerRadius: 6))
+                        
+                        Text("Emails")
+                            .font(.title2)
+                            .fontWeight(.semibold)
+                        
+                        Toggle(isOn: $isReminderOn) {
+
+                        }
+                        .toggleStyle(SwitchToggleStyle(tint: Color.green))
+                        
+                    } //: HStack
+                    .padding(.vertical, 5)
+                } header: {
+                    // No Header name
+                } //: Section
+                
+            } //: Form
             
             
         } //: VStack
