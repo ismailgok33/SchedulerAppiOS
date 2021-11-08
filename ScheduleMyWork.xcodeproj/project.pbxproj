@@ -15,6 +15,7 @@
 		EC149BCD27289C4200B51B6E /* HideKeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC149BCC27289C4200B51B6E /* HideKeyboardExtension.swift */; };
 		EC44DB67272D7AC0002D576B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44DB66272D7AC0002D576B /* ProfileView.swift */; };
 		EC44DB69272D7D98002D576B /* PriorityButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44DB68272D7D98002D576B /* PriorityButtonView.swift */; };
+		EC70FA842739B773001949A6 /* TaskStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70FA832739B773001949A6 /* TaskStatsView.swift */; };
 		EC7C9248272DE0BF00A1DC4A /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7C9247272DE0BF00A1DC4A /* Priority.swift */; };
 		EC7C924A272DEA1E00A1DC4A /* OverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7C9249272DEA1E00A1DC4A /* OverviewView.swift */; };
 		EC872669273076C900F4E3FC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC872668273076C900F4E3FC /* LoginView.swift */; };
@@ -48,6 +49,7 @@
 		EC149BCC27289C4200B51B6E /* HideKeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboardExtension.swift; sourceTree = "<group>"; };
 		EC44DB66272D7AC0002D576B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		EC44DB68272D7D98002D576B /* PriorityButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityButtonView.swift; sourceTree = "<group>"; };
+		EC70FA832739B773001949A6 /* TaskStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStatsView.swift; sourceTree = "<group>"; };
 		EC7C9247272DE0BF00A1DC4A /* Priority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Priority.swift; sourceTree = "<group>"; };
 		EC7C9249272DEA1E00A1DC4A /* OverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewView.swift; sourceTree = "<group>"; };
 		EC872668273076C900F4E3FC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 		EC149BC82728933900B51B6E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EC70FA812739B72C001949A6 /* Profile */,
 				EC44DB6A272D8141002D576B /* AddTaskViews */,
 				EC44DB6B272D8158002D576B /* TaskListViews */,
 				EC87266C273077EF00F4E3FC /* Auth */,
@@ -179,6 +182,14 @@
 				ECF8FEE22731D36400122448 /* TaskDetailView.swift */,
 			);
 			path = TaskListViews;
+			sourceTree = "<group>";
+		};
+		EC70FA812739B72C001949A6 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				EC70FA832739B773001949A6 /* TaskStatsView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		EC8726662730769C00F4E3FC /* Auth */ = {
@@ -303,6 +314,7 @@
 				ECF8FEE32731D36400122448 /* TaskDetailView.swift in Sources */,
 				EC7C9248272DE0BF00A1DC4A /* Priority.swift in Sources */,
 				EC149BBF2728847200B51B6E /* Persistence.swift in Sources */,
+				EC70FA842739B773001949A6 /* TaskStatsView.swift in Sources */,
 				EC9C46112729DD1900780C1F /* MainView.swift in Sources */,
 				EC7C924A272DEA1E00A1DC4A /* OverviewView.swift in Sources */,
 				EC9C460D2729DC1D00780C1F /* CalendarView.swift in Sources */,

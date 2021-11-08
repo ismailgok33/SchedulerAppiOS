@@ -34,7 +34,7 @@ struct MainView: View {
                     Text("Calendar")
                 }
             
-            ProfileView()
+            ProfileView(statTitle: "Task Done", statValue: "24325")
                 .tabItem {
                     Image(systemName: "person.fill")
                     Text("Pofile")
