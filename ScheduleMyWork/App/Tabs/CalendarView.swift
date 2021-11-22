@@ -17,11 +17,54 @@ struct CalendarView: View {
     
     var body: some View {
         
-        ScrollView(.vertical, showsIndicators: false) {
+        if #available(iOS 15.0, *) {
+            ScrollView(.vertical, showsIndicators: false) {
+                
+                VStack {
+                    CustomDatePicker(currentDate: $currentDate)
+                } //: VStack
+                .padding(.vertical)
+                
+            } //: ScrollView
+            .safeAreaInset(edge: .bottom) {
+                
+                HStack {
+                    
+                    Button {
+                        
+                    } label: {
+                        Text("Add Task")
+                            .fontWeight(.bold)
+                            .padding(.vertical)
+                            .frame(maxWidth: .infinity)
+                            .background(Color.orange.opacity(0.7), in: Capsule())
+                            
+                    }
+                    
+                    Button {
+                        
+                    } label: {
+                        Text("Add Remainder")
+                            .fontWeight(.bold)
+                            .padding(.vertical)
+                            .frame(maxWidth: .infinity)
+                            .background(Color.purple.opacity(0.7), in: Capsule())
+                    }
+                    
+                } //: HStack
+                .padding(.horizontal)
+                .padding(.top, 10)
+                .foregroundColor(.white)
+                .background(.ultraThinMaterial)
+                
+                
+            }
+        }
+        else {
             
-            CustomDatePicker(currentDate: $currentDate)
+            // Fallback on earlier versions
             
-        } //: ScrollView
+        } //: SafeAreaInset
         
     }
 }
