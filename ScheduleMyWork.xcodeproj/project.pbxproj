@@ -35,6 +35,7 @@
 		ECA3F194272C8D3200B3BE55 /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA3F193272C8D3200B3BE55 /* CheckboxStyle.swift */; };
 		ECA3F196272C8D9900B3BE55 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA3F195272C8D9900B3BE55 /* Constant.swift */; };
 		ECA3F198272CAE5F00B3BE55 /* TaskListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA3F197272CAE5F00B3BE55 /* TaskListHeaderView.swift */; };
+		ECA4BCE0274C3987001DC9AC /* CurrentDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4BCDF274C3987001DC9AC /* CurrentDateExtension.swift */; };
 		ECBE0509274A94A60078D0E1 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBE0508274A94A60078D0E1 /* CustomDatePicker.swift */; };
 		ECBE050B274A99C40078D0E1 /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBE050A274A99C40078D0E1 /* DateValue.swift */; };
 		ECBE050D274AA3EC0078D0E1 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBE050C274AA3EC0078D0E1 /* Task.swift */; };
@@ -72,6 +73,7 @@
 		ECA3F193272C8D3200B3BE55 /* CheckboxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxStyle.swift; sourceTree = "<group>"; };
 		ECA3F195272C8D9900B3BE55 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		ECA3F197272CAE5F00B3BE55 /* TaskListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListHeaderView.swift; sourceTree = "<group>"; };
+		ECA4BCDF274C3987001DC9AC /* CurrentDateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDateExtension.swift; sourceTree = "<group>"; };
 		ECBE0508274A94A60078D0E1 /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
 		ECBE050A274A99C40078D0E1 /* DateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValue.swift; sourceTree = "<group>"; };
 		ECBE050C274AA3EC0078D0E1 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			children = (
 				EC149BCC27289C4200B51B6E /* HideKeyboardExtension.swift */,
 				ECF8FEE42731D87D00122448 /* ScreenSizeExtension.swift */,
+				ECA4BCDF274C3987001DC9AC /* CurrentDateExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				EC44DB67272D7AC0002D576B /* ProfileView.swift in Sources */,
 				EC149BB62728846F00B51B6E /* ScheduleMyWorkApp.swift in Sources */,
 				EC9C46152729E6BF00780C1F /* AddTaskFormView.swift in Sources */,
+				ECA4BCE0274C3987001DC9AC /* CurrentDateExtension.swift in Sources */,
 				ECA3F191272C80EB00B3BE55 /* TaskItemView.swift in Sources */,
 				ECBE0509274A94A60078D0E1 /* CustomDatePicker.swift in Sources */,
 				ECF8FEE52731D87D00122448 /* ScreenSizeExtension.swift in Sources */,

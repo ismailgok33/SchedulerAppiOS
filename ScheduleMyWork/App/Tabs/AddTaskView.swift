@@ -13,6 +13,8 @@ struct AddTaskView: View {
     
     @State var task: String = ""
     @EnvironmentObject var priority: Priority
+    @State private var taskDate: Date = Date()
+    @State private var taskTime: Date = Date()
     
     private var isButtonDisabled: Bool {
         task.isEmpty
@@ -33,7 +35,7 @@ struct AddTaskView: View {
             Spacer()
             
             // Bottom form
-            AddTaskFormView()
+            AddTaskFormView(taskDate: $taskDate, taskTime: $taskTime)
                 .padding()
                 .background(
                     Color.white

@@ -14,6 +14,8 @@ struct AddTaskFormView: View {
     @State var task: String = ""
     @State var remindMe: Bool = false
     @EnvironmentObject var priority: Priority
+    @Binding var taskDate: Date
+    @Binding var taskTime: Date
     
     private var isButtonDisabled: Bool {
         task.isEmpty
@@ -57,10 +59,60 @@ struct AddTaskFormView: View {
             
             VStack(alignment: .leading, spacing: 20) {
                 // Calendar Date
-                AddTaskFormItemView(imageName: "calendar", title: "Friday, 25 October", color: Color.purple)
+//                AddTaskFormItemView(imageName: "calendar", title: "Friday, 25 October", color: Color.purple)
+                
+                HStack(alignment: .center) {
+                   
+                    DatePicker(selection: $taskDate, in: Date()..., displayedComponents: .date) {
+                        
+                        ZStack {
+                            Circle()
+                                .frame(width: 50, height: 50, alignment: .center)
+                                .foregroundColor(.clear)
+                                .background(
+                                    Color.purple
+                                        .opacity(0.25)
+                                        .cornerRadius(25)
+                                )
+                            
+                            Image(systemName: "calendar")
+                                .font(.title2)
+                                .foregroundColor(Color.purple)
+                        } //: ZStack
+                        
+                    } //: DatePicker
+                                            
+                } //: HStack
+                .padding(.vertical, 3)
+                .padding(.horizontal, 20)
                 
                 // Time
-                AddTaskFormItemView(imageName: "clock", title: "11:15 - 12:00 AM", color: Color.pink)
+//                AddTaskFormItemView(imageName: "clock", title: "11:15 - 12:00 AM", color: Color.pink)
+                
+                HStack(alignment: .center) {
+                   
+                    DatePicker(selection: $taskDate, displayedComponents: .hourAndMinute) {
+                        
+                        ZStack {
+                            Circle()
+                                .frame(width: 50, height: 50, alignment: .center)
+                                .foregroundColor(.clear)
+                                .background(
+                                    Color.pink
+                                        .opacity(0.25)
+                                        .cornerRadius(25)
+                                )
+                            
+                            Image(systemName: "clock")
+                                .font(.title2)
+                                .foregroundColor(Color.pink)
+                        } //: ZStack
+                        
+                    } //: DatePicker
+                                            
+                } //: HStack
+                .padding(.vertical, 3)
+                .padding(.horizontal, 20)
                 
                 // Reminder
                 HStack(alignment: .center, spacing: 5) {
@@ -128,7 +180,7 @@ struct AddTaskFormView: View {
 
 struct AddTaskFormView_Previews: PreviewProvider {
     static var previews: some View {
-        AddTaskFormView()
+        AddTaskFormView(taskDate: .constant(Date()), taskTime: .constant(Date()))
             .environmentObject(Priority())
             .previewLayout(.sizeThatFits)
     }
