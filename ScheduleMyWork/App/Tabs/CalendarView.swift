@@ -8,10 +8,25 @@
 import SwiftUI
 
 struct CalendarView: View {
+    
+    // MARK: - Properties
+    
+    @State var currentDate: Date = Date()
+    
+    // MARK: - Body
+    
     var body: some View {
-        Text("Calendar View")
+        
+        ScrollView(.vertical, showsIndicators: false) {
+            
+            CustomDatePicker(currentDate: $currentDate)
+            
+        } //: ScrollView
+        
     }
 }
+
+// MARK: - Preview
 
 struct CalendarView_Previews: PreviewProvider {
     static var previews: some View {

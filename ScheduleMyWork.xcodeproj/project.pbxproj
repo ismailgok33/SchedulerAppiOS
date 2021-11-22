@@ -35,6 +35,9 @@
 		ECA3F194272C8D3200B3BE55 /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA3F193272C8D3200B3BE55 /* CheckboxStyle.swift */; };
 		ECA3F196272C8D9900B3BE55 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA3F195272C8D9900B3BE55 /* Constant.swift */; };
 		ECA3F198272CAE5F00B3BE55 /* TaskListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA3F197272CAE5F00B3BE55 /* TaskListHeaderView.swift */; };
+		ECBE0509274A94A60078D0E1 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBE0508274A94A60078D0E1 /* CustomDatePicker.swift */; };
+		ECBE050B274A99C40078D0E1 /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBE050A274A99C40078D0E1 /* DateValue.swift */; };
+		ECBE050D274AA3EC0078D0E1 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBE050C274AA3EC0078D0E1 /* Task.swift */; };
 		ECF8FEE32731D36400122448 /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF8FEE22731D36400122448 /* TaskDetailView.swift */; };
 		ECF8FEE52731D87D00122448 /* ScreenSizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF8FEE42731D87D00122448 /* ScreenSizeExtension.swift */; };
 /* End PBXBuildFile section */
@@ -69,6 +72,9 @@
 		ECA3F193272C8D3200B3BE55 /* CheckboxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxStyle.swift; sourceTree = "<group>"; };
 		ECA3F195272C8D9900B3BE55 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		ECA3F197272CAE5F00B3BE55 /* TaskListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListHeaderView.swift; sourceTree = "<group>"; };
+		ECBE0508274A94A60078D0E1 /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
+		ECBE050A274A99C40078D0E1 /* DateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValue.swift; sourceTree = "<group>"; };
+		ECBE050C274AA3EC0078D0E1 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		ECF8FEE22731D36400122448 /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
 		ECF8FEE42731D87D00122448 /* ScreenSizeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizeExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +133,7 @@
 		EC149BC82728933900B51B6E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ECBE0507274A94920078D0E1 /* Calendar */,
 				EC70FA812739B72C001949A6 /* Profile */,
 				EC44DB6A272D8141002D576B /* AddTaskViews */,
 				EC44DB6B272D8158002D576B /* TaskListViews */,
@@ -141,6 +148,8 @@
 				EC149BBE2728847200B51B6E /* Persistence.swift */,
 				EC149BC02728847200B51B6E /* ScheduleMyWork.xcdatamodeld */,
 				EC7C9247272DE0BF00A1DC4A /* Priority.swift */,
+				ECBE050A274A99C40078D0E1 /* DateValue.swift */,
+				ECBE050C274AA3EC0078D0E1 /* Task.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -241,6 +250,14 @@
 			path = Style;
 			sourceTree = "<group>";
 		};
+		ECBE0507274A94920078D0E1 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				ECBE0508274A94A60078D0E1 /* CustomDatePicker.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -320,6 +337,7 @@
 				EC9C460D2729DC1D00780C1F /* CalendarView.swift in Sources */,
 				ECA3F196272C8D9900B3BE55 /* Constant.swift in Sources */,
 				EC149BC22728847200B51B6E /* ScheduleMyWork.xcdatamodeld in Sources */,
+				ECBE050B274A99C40078D0E1 /* DateValue.swift in Sources */,
 				EC87267427307B4000F4E3FC /* CustomSecureFieldView.swift in Sources */,
 				EC9C460F2729DC3300780C1F /* AddTaskView.swift in Sources */,
 				ECA3F198272CAE5F00B3BE55 /* TaskListHeaderView.swift in Sources */,
@@ -330,7 +348,9 @@
 				EC149BB62728846F00B51B6E /* ScheduleMyWorkApp.swift in Sources */,
 				EC9C46152729E6BF00780C1F /* AddTaskFormView.swift in Sources */,
 				ECA3F191272C80EB00B3BE55 /* TaskItemView.swift in Sources */,
+				ECBE0509274A94A60078D0E1 /* CustomDatePicker.swift in Sources */,
 				ECF8FEE52731D87D00122448 /* ScreenSizeExtension.swift in Sources */,
+				ECBE050D274AA3EC0078D0E1 /* Task.swift in Sources */,
 				EC872669273076C900F4E3FC /* LoginView.swift in Sources */,
 				EC87266B273076DA00F4E3FC /* SignUpView.swift in Sources */,
 				EC9C46132729E2C600780C1F /* AddTaskHeaderView.swift in Sources */,
